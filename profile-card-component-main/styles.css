@@ -1,0 +1,183 @@
+/* reset browser default css  */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* css variable declaration  */
+:root {
+  --desktop-width: 1440px;
+  --mobile-width: 375px;
+
+  --primary-bg-color: hsl(185, 75%, 39%);
+  --card-bg-color: #fff;
+
+  --primary-text-color: hsl(229, 23%, 23%);
+  --secondary-text-color: hsl(227, 10%, 46%);
+
+  --line-color: hsl(0, 0%, 59%);
+
+  --primary-font-family: "Kumbh Sans", sans-serif;
+  --primary-font-weight: 700;
+  --secondary-font-weight: 400;
+
+  --font-size-big: 1.125rem; /* 18px */
+}
+
+body {
+  font-family: var(--primary-font-family);
+  text-align: center;
+}
+
+/* bacground colors and images section  */
+.background {
+  background-color: var(--primary-bg-color);
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.top-bg-circle {
+  position: absolute;
+  bottom: 38%;
+  right: 52%;
+}
+
+.bottom-bg-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+/* card section  350 x 373*/
+.card {
+  background-color: var(--card-bg-color);
+  box-shadow: 0 0 50px rgba(68, 68, 68, 0.726);
+  border-radius: 15px;
+  overflow: hidden;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* card middle section  */
+.card__middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-bottom: solid var(--line-color) 1px;
+}
+
+.profile-photo {
+  width: 95px;
+  height: auto;
+
+  border-radius: 50%;
+  border: solid var(--card-bg-color) 5px;
+
+  transform: translateY(-50%);
+}
+
+.user-info {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+
+  justify-content: center;
+  align-content: center;
+
+  margin-top: -28px;
+  padding-bottom: 28px;
+}
+
+.name {
+  justify-self: end;
+}
+
+.age {
+  padding-left: 10px;
+  font-size: var(--font-size-big);
+  justify-self: start;
+}
+
+.city {
+  font-size: 0.9rem;
+  grid-column: 1 / 3;
+  justify-self: center;
+
+  padding-top: 15px;
+}
+
+.name,
+.stat-number {
+  font-size: var(--font-size-big);
+  color: var(--primary-text-color);
+  font-weight: var(--primary-font-weight);
+}
+
+.age,
+.city,
+.stat-info {
+  color: var(--secondary-text-color);
+  font-weight: var(--secondary-font-weight);
+}
+
+/* card bottom section  */
+.card__bottom {
+  width: 100%;
+  height: 90px;
+  padding: 0 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-info {
+  font-size: 0.75rem;
+  padding-top: 5px;
+}
+
+/* frontend mentor attribution default css  */
+.attribution {
+  position: absolute;
+  font-size: 11px;
+  text-align: center;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ------------------------------------------------ */
+/* responsive mobile view  */
+
+@media screen and (max-width: 375px) {
+  /* card */
+  .card {
+    width: 90vw;
+  }
+  .card__bottom {
+    padding: 0;
+    justify-content: space-around;
+  }
+
+  /* background  */
+  .top-bg-circle {
+    bottom: 30%;
+    right: 45%;
+  }
+
+  .bottom-bg-circle {
+    top: 40%;
+    left: 40%;
+  }
+}

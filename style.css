@@ -1,0 +1,140 @@
+/* ========= resetting default browser styles ================*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============== variable declaration ================== */
+:root {
+  --primary-color: rgba(28, 32, 34, 1);
+  --secondary-color: rgba(153, 153, 153, 1);
+
+  --bg-color: rgba(250, 250, 250, 1);
+  --card-bg-color: rgba(255, 255, 255, 1);
+  --btn-bg-color: rgba(237, 44, 73, 1);
+  --btn-bg-color-hover: rgb(196, 25, 50);
+}
+
+/* ============= css starts here ================== */
+body {
+  text-align: center;
+  background-color: var(--bg-color);
+  font-family: "Heebo", sans-serif;
+  color: var(--primary-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* ============ header and footer sections ================ */
+header {
+  padding: 20px 0;
+}
+
+footer {
+  border-top: solid rgba(184, 184, 184, 0.562) 1px;
+  margin-top: 25px;
+  padding: 10px;
+}
+
+/* =============== card css ============================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 25px;
+
+  padding: 25px 0;
+}
+
+.card {
+  background-color: var(--card-bg-color);
+  border: solid rgba(184, 184, 184, 0.562) 1px;
+  box-shadow: 0 0 23px #bbb8b8db;
+
+  width: auto;
+  /* height: 638px; */
+
+  overflow: hidden;
+  position: relative;
+}
+
+/* card top section  */
+.card__top {
+  width: 100%;
+  height: auto;
+
+  overflow: hidden;
+}
+
+.card__top img {
+  width: 100%;
+  height: auto;
+
+  transition: transform 1s;
+}
+
+.card__top img:hover {
+  transform: scale(1.2);
+}
+
+/* card middle section  */
+.card__middle {
+  padding: 25px;
+  padding-bottom: 70px;
+  text-align: left;
+}
+
+.card__middle h2 {
+  font-weight: 400;
+}
+
+.card__middle h4 {
+  color: var(--secondary-color);
+  font-weight: 400;
+}
+
+/* card bottom section  */
+.card__bottom {
+  padding-bottom: 25px;
+}
+
+.card__bottom a {
+  color: var(--bg-color);
+  background-color: var(--btn-bg-color);
+  border-radius: 25px;
+
+  display: inline-block;
+  width: 75%;
+  padding: 10px;
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 25px;
+
+  font-style: italic;
+  letter-spacing: 1px;
+
+  transition: background-color 0.5s;
+}
+
+.card__bottom a:hover {
+  background-color: var(--btn-bg-color-hover);
+}
+
+/* ============= responsive css ================*/
+@media screen and (max-width: 360px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
