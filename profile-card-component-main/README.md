@@ -27,8 +27,8 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/html-css-flexbox-grid-aPmzNYm0M](https://www.frontendmentor.io/solutions/html-css-flexbox-grid-aPmzNYm0M)
+- Live Site URL: [https://nagalokeshp13.github.io/my-fem-challenges/profile-card-component-main/index.html](https://nagalokeshp13.github.io/my-fem-challenges/profile-card-component-main/index.html)
 
 ## My process
 
